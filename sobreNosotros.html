@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            background-color: #F0F3F4;
+            font-family: "Montserrat", sans-serif;
+        }
+        h1{
+            text-align: center;
+        }
+        .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2C3E50;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: grey;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+p{
+    text-align: center; 
+}
+.social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li a {
+  color: #666;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+  color: #333;
+}
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sobre Nosotros</title>
+</head>
+<body>
+
+  <nav class="sidenav" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a target="_blank" href="index.html">Inicio</a>
+    <a target="_blank" href="sobreNosotros.html">Sobre Nosotros</a>
+    <a target="_blank" href="masInformacion.html">Más información</a>
+    <a target="_blank" href="contacto.html">contacto</a>
+    <a target="_blank" href="https://GitHub.com">Repositorio de GitHub</a>
+  </nav>
+      
+      
+      
+      <div class="main" id="main">
+        <span style="font-size:30px;cursor:pointer"  onclick="openNav()">&#9776;</span>
+      </div>
+    <h1>¿Quienes Somos?</h1>
+    <p>En Los Angeles, nos enorgullece ofrecerte una experiencia única en moda. Nos especializamos en la confección de prendas elaboradas con la más alta calidad de algodón. Desde nuestras raíces hasta cada hilo tejido, nos comprometemos a brindarte no solo ropa, sino una historia de comodidad, estilo y sustentabilidad. Somos más que una marca, somos una expresión de tu autenticidad, fusionando la frescura del algodón con la elegancia de la moda contemporánea.</p>
+    <script>
+        function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "-250px";
+  document.getElementById("overlay").style.width = "100%";
+  document.getElementById("overlay").style.opacity = "0.8";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("overlay").style.width = "0";
+  document.getElementById("overlay").style.opacity = "0";
+}
+    </script>
+    <hr style="margin-top: 100px" class="separator">
+    <footer style="margin-top: 20px">
+      <div class="container">
+          <div class="row">
+              <div class="col-md-4">
+                  <h4>Contacto</h4>
+                  <p>Dirección: Pepito123</p>
+                  <p>Teléfono: +54-11-22334455</p>
+                  <p>Correo electrónico: Sammauro@gmail.com</p>
+              </div>
+              <div class="col-md-4">
+                  <h4>Enlaces rápidos</h4>
+                  <ul>
+                      <li><a class="enlacesR" href="index.html">Inicio</a></li>
+                      <li><a class="enlacesR" href="sobreNosotros.html">sobre Nosotros</a></li>
+                      <li><a class="enlacesR" href="masInformacion.html">Mas información</a></li>
+                      <li><a class="enlacesR" href="contacto.html">Contacto</a></li>
+                  </ul>
+              </div>
+              <div class="col-md-4">
+                  <h4>Síguenos</h4>
+                  <ul class="social-icons">
+                      <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                      <li><a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
+                      <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+                  </ul>
+              </div>
+          </div>
+      </div>
+    </footer>
+    <style>
+        .enlacesR{
+          text-decoration: none;
+          color: #48e;
+        }
+        .separator {
+      width: 50%; 
+      margin: 0 auto;
+      border: none;
+      border-top: 1px solid #ccc;
+      margin-bottom: 30px;
+    }
+    footer {
+      background-color: #F0F3F4;
+      padding: 50px 0;
+      position: relative;
+      bottom: 0;
+    }
+    
+    footer h4 {
+      color: #333;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    
+    footer p, footer ul {
+      color: #666;
+    }
+    
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    footer ul li {
+      margin-bottom: 10px;
+    }
+    p,
+    .footer p {
+      color: #333333;
+    }
+    
+    /* Color de texto secundario */
+    .footer ul,
+    .footer ul li {
+      color: #666666;
+    }
+    
+    /* Color de fondo del footer */
+    footer {
+      background-color: #d8dce6;
+      text-align: center;
+    }
+    </style>
+</body>
+</html>

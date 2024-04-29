@@ -1,0 +1,299 @@
+
+body {
+  background-color: #f5f5f5;
+  margin: 0;
+  padding: 0;
+  font-family: "Montserrat", sans-serif;
+}
+
+
+
+
+p {
+  color: #333333;
+}
+.sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2C3E50;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: grey;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+/* Estilos para los botones "Agregar al carrito" */
+button {
+  background-color: #2C3E50; /* Color de fondo verde */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+  transition-duration: 0.4s;
+  cursor: pointer;
+  border-radius: 20px; /* Borde redondeado */
+}
+
+button:hover {
+  background-color: #2C3E50; /* Color de fondo verde más oscuro al pasar el mouse */
+  color: white;
+  transform: scale(1.1); /* Efecto de escala al pasar el mouse */
+  box-shadow: 0 4px 8px 0 rgba(0,0,0,0.2); /* Sombra al pasar el mouse */
+}
+
+button:active {
+  background-color: #51677e; /* Color de fondo verde al hacer clic */
+  transform: scale(1); /* Regresa a su tamaño original al hacer clic */
+  box-shadow: 0 2px 4px 0 rgba(0,0,0,0.2); /* Sombra al hacer clic */
+}
+/* Color principal (fondo de la página) */
+body {
+  background-color: #f7f7f7;
+}
+
+/* Color de destacado (botones, títulos, etc.) */
+button,
+h1,
+h2,
+h3 {
+  color: #6c7b95;
+}
+
+/* Color de acento (detalles, iconos, etc.) */
+.cart-icon-modal:hover,
+.social-icons li a {
+  color: #a3bdd3;
+}
+
+ Color de texto principal */
+p {
+  color: #333333;
+}
+
+
+.product {
+  margin-bottom: 20px;
+}
+.cart {
+  width: 250px;
+  height: 100%;
+  position: fixed;
+  top: 0;
+  right: 0;
+  background-color: #f0f3f4;
+  overflow-x: hidden;
+  padding-top: 60px;
+  z-index: 1;
+  display: none; 
+  transition: transform 0.3s ease;
+}
+.cart-item {
+  transition: transform 0.3s ease; 
+}
+.cart-item.added {
+  transform: scale(1.1); 
+}
+.cart a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: black; 
+  display: block;
+  transition: 0.3s;
+}
+.cart a:hover {
+  color: #3498db; 
+}
+
+.cart-icon-modal {
+  font-size: 30px;
+  cursor: pointer;
+  color: #333;
+  position: fixed; /* Lo fijamos en la pantalla */
+  top: 20px; /* Distancia desde la parte superior */
+  right: 20px; /* Distancia desde el borde derecho */
+  z-index: 999; /* Asegura que esté por encima del resto del contenido */
+  transition: all 0.3s;
+}
+.cart-icon-modal:hover {
+  transform: scale(1.2)
+}
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1000; 
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #fff; 
+  padding: 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+}
+.overlay {
+  display: none;
+  position: fixed;
+  z-index: 999; 
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); 
+}
+.EsteEsElLogo:hover{
+    transform: scale(1.1);
+    box-shadow: 0px 0px 100px grey;
+    cursor: pointer;
+}
+.EsteEsElLogo{
+  transition: all 0.3s;
+}
+.Carrito123{
+  transition: all 0.2s;
+}
+
+
+.main-container {
+  text-align: center;
+  margin-top: 50px; 
+}
+
+
+.container{
+ margin: 0 auto;
+ width: 75%;
+}
+.h2{
+  text-align: center;
+}
+.close{
+  transition: all 0.2s;
+}
+.close:hover{
+  cursor: pointer;
+  color: rgb(97, 0, 0);
+}
+/* Coloca aquí los estilos CSS que están en tu archivo styles.css */
+
+/* Media queries para hacer la página responsive */
+
+/* Para pantallas de hasta 768px de ancho */
+.cart-item button {
+  padding: 5px 10px; /* Reducir el relleno del botón */
+  font-size: 12px; /* Reducir el tamaño de la fuente */
+  background-color: #fff;
+}
+.cart-item button:hover{
+  color: white;
+  background-color: #2C3E50;
+}
+.cart-item {
+  display: inline-block; /* Mostrar los elementos en línea */
+  width: 30%; /* Ajustar el ancho de cada elemento */
+  margin-right: 5px; /* Agregar un margen entre los elementos */
+}
+.imagenesProd:hover{
+   transform: scale(1.1);
+}
+.imagenesProd{
+  transition: all 0.3s;
+}
+#cartItemCount {
+  position: fixed;
+  top: 5px;
+  right: 5px;
+  background-color: #2C3E50;
+  border-radius: 50%;
+  padding: 5px;
+  z-index: 999; 
+  color: white;
+}
+ 
+@media only screen and (max-width: 768px) {
+  .container {
+    margin-left: 0;
+  }
+
+  .products-container {
+    padding: 20px;
+    position: relative
+  }
+
+  .product {
+    display: block;
+    margin: 0 auto 20px auto;
+    text-align: center;
+  }
+
+  .product img {
+    width: 100%;
+  }
+
+  .h2 {
+    font-size: 1.5rem;
+  }
+
+  .logo-container img {
+    width: 150px;
+  }
+}
+
+/* Para pantallas de hasta 480px de ancho */
+@media only screen and (max-width: 480px) {
+  .container {
+    width: 100%;
+  }
+
+  .logo-container img {
+    width: 100px;
+  }
+}
+
+.eliminarTodo{
+  background-color: white;
+  color: red;
+  padding: 10px
+}
+.eliminarTodo:hover{
+  background-color: red;
+  color: white;
+}
+.pagar{
+  background-color: white;
+  color: green;
+  padding: 10px;
+}
+.pagar:hover{
+  background-color: green;
+  color: white;
+}
+.products-container {
+  margin-bottom: 70px; 
+}
+.Contenido{
+  margin-bottom: 70px
+}

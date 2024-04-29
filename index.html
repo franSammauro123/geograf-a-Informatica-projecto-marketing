@@ -1,0 +1,397 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>SELCE.com</title>
+  <link rel="stylesheet" href="styles.css"> 
+  <style>
+   
+    .products-container {
+      display: block;
+      justify-content: center;
+      align-items: center;
+      height: 100vh; 
+      flex-direction: column;
+    }
+
+    .container {
+      text-align: center;
+    }
+
+    
+    .logo-container {
+      margin-bottom: 20px; 
+    }
+
+    .logo-container img {
+      width: 200px;
+      border-radius: 10px;
+    }
+
+    .logo-container h1, .logo-container h2 {
+      margin: 0; 
+      color: #333; 
+    }
+    .imgYNombre{
+        text-align: center
+    }
+    .separator {
+  width: 50%; 
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+
+.custom-alert {
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  background-color: #a4b0be;
+  color: white;
+  padding: 10px 20px;
+  border-radius: 5px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+  z-index: 999;
+}
+
+    
+    @media only screen and (max-width: 768px) {
+      .logo-container img {
+        width: 150px;
+      }
+    }
+  </style>
+</head>
+<body>
+  
+  <div class="Contenido">
+
+  <nav class="sidenav" id="mySidenav">
+    <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+    <a target="_blank" href="index.html">Inicio</a>
+    <a target="_blank" href="sobreNosotros.html">Sobre Nosotros</a>
+    <a target="_blank" href="masInformacion.html">Más información</a>
+    <a target="_blank" href="contacto.html">contacto</a>
+    <a target="_blank" href="https://GitHub.com">Repositorio de GitHub</a>
+  </nav>
+
+
+
+ 
+    <div class="main" id="main">
+      <span style="font-size:30px;cursor:pointer"  onclick="openNav()">&#9776;</span>
+    </div>
+  
+
+
+<div class="imgYNombre">
+  <div class="logo-container">
+    <img class="EsteEsElLogo" style="border-radius: 100%; " src="Logo para marca de ropa masculina minimalista tipográfico negro.png" alt="Logo de Los Angeles Indumentaria">
+    <h1 style="">SELCE</h1>
+    <h2 style="color: #333333">(Lo Que significa va aca)</h2>
+  </div>
+</div>
+
+
+<div class="Carrito123" id="cartButtonContainer" style="position: absolute; top: 20px; right: 20px;">
+  <span class="cart-icon-modal" onclick="openCartWithoutNav(event)"><i class="fas fa-shopping-cart"></i></span>
+  <span id="cartItemCount" class="cart-item-count">0</span> <!-- Contador de productos -->
+</div>
+
+
+    
+</div>
+</div>
+
+
+<div id="cartModal" class="modal">
+  <div class="modal-content">
+    <span style="font-size: 30px;" title="cerrar" class="close" onclick="closeCartModal()">&times;</span>
+    <h2>Carrito de Compras:</h2>
+    <div id="cartItemsModal"></div>
+    <button class="eliminarTodo" onclick="clearCart()">Eliminar todos los productos</button> <!-- Botón para eliminar todos los productos -->
+    <button class="pagar" onclick="payCart()">Pagar</button> <!-- Botón para pagar los productos -->
+  </div>
+</div>
+
+
+<div id="overlay" class="overlay"></div>
+
+
+<script src="script.js"></script>
+
+
+<script>
+
+function openCartWithoutNav(event) {
+event.stopPropagation();
+openCartModal(); 
+}
+</script>
+
+
+
+<style>
+.enlacesR{
+  text-decoration: none;
+  color: #48e;
+}
+</style>
+<script>
+var swiper = new Swiper('.swiper-container', {
+slidesPerView: 1,
+spaceBetween: 10,
+loop: true,
+navigation: {
+  nextEl: '.swiper-button-next',
+  prevEl: '.swiper-button-prev',
+},
+});
+</script>
+
+
+
+<div class="products-container">
+
+  <div class="container">
+
+    <div class="products-container">
+     
+      <div class="container">
+    
+
+<div class="products-container">
+ 
+  <div class="container">
+    <h2 class="h2">Nuestros productos:</h2>
+    
+    <table style="margin: 0 auto;">
+      <tr>
+        <td class="product" style="padding: 10px;">
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod1.jpeg" alt="Producto 1">
+          <h2 style="margin-top: 10px;">Remeras de Algodón simples</h2>
+          <p>Precio: $20 C/U</p>
+          <button onclick="addToCart('Remera Algodón simole', 20)">Agregar al carrito</button>
+        </td>
+        <td class="product" style="padding: 10px;">
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod2.jpeg" alt="Producto 2">
+          <h2 style="margin-top: 10px;">Remera de algodón verde</h2>
+          <p>Precio: 20$USD</p>
+          <button onclick="addToCart('Remera de algodón verde', 20)">Agregar al carrito</button>
+        </td>
+      
+      </tr>
+      <tr>
+        <td class="product" style="padding: 10px;">
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod3.jpeg">
+          <h2 style="margin-top: 10px;">Remera de Algodón celeste</h2>
+          <p>Precio: 20$USD</p>
+          <button onclick="addToCart('Remera de Algodón celeste', 20)">Agregar al carrito</button>
+        </td>
+        <td class="product" style="padding: 10px;">
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod4.jpeg" alt="Producto 4">
+          <h2 style="margin-top: 10px;">Remera Algodón azul</h2>
+          <p>Precio: 20$USD</p>
+          <button onclick="addToCart('Remera Algodón azul', 20)">Agregar al carrito</button>
+        </td>
+        
+      </tr>
+      <tr>
+        <td class="product" style="padding: 10px;">
+          
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod5.jpeg" alt="Producto 5">
+          <h2 style="margin-top: 10px;">Remera Algodón Beige</h2>
+          <p>Precio: 20$USD</p>
+          <button onclick="addToCart('Remera Algodón Beige', 20)">Agregar al carrito</button>
+        </td>
+        <td class="product" style="padding: 10px;">
+          <!-- Producto 6 -->
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod6.jpeg" alt="Producto 6">
+          <h2 style="margin-top: 10px;">Gorro de Algodón celeste</h2>
+          <p>Precio: 5$USD</p>
+          <button onclick="addToCart('Gorro de Algodón celeste', 5)">Agregar al carrito</button>
+        </td>
+      </tr>
+      
+      <tr>
+        <td class="product" style="padding: 10px;">
+          
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod7.jpeg" alt="Producto 7">
+          <h2 style="margin-top: 10px;">Gorro de Algodón Gris</h2>
+          <p>Precio: 5$USD</p>
+          <button onclick="addToCart('Gorro de Algodón Gris', 5)">Agregar al carrito</button>
+        </td>
+        <td class="product" style="padding: 10px;">
+          
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod8.jpeg" alt="Producto 8">
+          <h2 style="margin-top: 10px;">Pantalon de Algodón Negro</h2>
+          <p>Precio: 35$USD</p>
+          <button onclick="addToCart('Zapatillas Nike', 35)">Agregar al carrito</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="product" style="padding: 10px;">
+          
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod9.jpeg" alt="Producto 9">
+          <h2 style="margin-top: 10px;">Pantalon de Algodón Gris</h2>
+          <p>Precio: 35$USD</p>
+          <button onclick="addToCart('Pantalon de Algodón Gris', 35)">Agregar al carrito</button>
+        </td>
+        <td class="product" style="padding: 10px;">
+          
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod10.jpeg" alt="Producto 10">
+          <h2 style="margin-top: 10px;">Pantalon de Algodón Negros</h2>
+          <p>Precio: 35$USD</p>
+          <button onclick="addToCart('Zapatillas Nike', 35)">Agregar al carrito</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="product" style="padding: 10px;">
+          
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod11.jpeg" alt="Producto 11">
+          <h2 style="margin-top: 10px;">Short de Algodón Negro</h2>
+          <p>Precio: 25$USD</p>
+          <button onclick="addToCart('Short de Algodón Negro', 25)">Agregar al carrito</button>
+        </td>
+        <td class="product" style="padding: 10px;">
+          
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod12.jpeg" alt="Producto 12">
+          <h2 style="margin-top: 10px;">Short de Algodón Gris</h2>
+          <p>Precio: 25$USD</p>
+          <button onclick="addToCart('Short de Algodón Gris', 25)">Agregar al carrito</button>
+        </td>
+      </tr>
+      <tr>
+        <td class="product" style="padding: 10px;">
+          
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prd13.jpeg" alt="Producto 13">
+          <h2 style="margin-top: 10px;">Buzo de Algodón Beige</h2>
+          <p>Precio: 45$USD</p>
+          <button onclick="addToCart('Buzo de Algodón Beige', 45)">Agregar al carrito</button>
+        </td>
+        <td class="product" style="padding: 10px;">
+          
+          <img class="imagenesProd" style="width: 200px; border-radius: 30px;" src="prod14.jpeg" alt="Producto 14">
+          <h2 style="margin-top: 10px;">Buzo de Algodón Negro</h2>
+          <p>Precio: 45$USD</p>
+          <button onclick="addToCart('Buzo de Algodón Negro', 45)">Agregar al carrito</button>
+        </td>
+      </tr>
+    </table>
+  </div>
+</div>
+
+
+</div>
+
+<hr style="margin-top: 1000px" class="separator">
+<footer style="margin-top: 20px">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-4">
+        <h4>Contacto</h4>
+        <p>Dirección: Pepito123</p>
+        <p>Teléfono: +54-11-22334455</p>
+        <p>Correo electrónico: Sammauro@gmail.com</p>
+      </div>
+      <div class="col-md-4">
+        <h4>Enlaces rápidos</h4>
+        <ul>
+          <li><a class="enlacesR" href="index.html">Inicio</a></li>
+          <li><a class="enlacesR" href="sobreNosotros.html">sobre Nosotros</a></li>
+          <li><a class="enlacesR" href="masInformacion.html">Mas información</a></li>
+          <li><a class="enlacesR" href="contacto.html">Contacto</a></li>
+        </ul>
+      </div>
+      <div class="col-md-4">
+        <h4>Síguenos</h4>
+        <ul class="social-icons">
+          <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+          <li><a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
+          <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</footer>
+<style>
+   .separator {
+      width: 50%; 
+      margin: 0 auto;
+      border: none;
+      border-top: 1px solid #ccc;
+      position: relative;
+      top: 1700px
+    }
+          .enlacesR{
+          text-decoration: none;
+          color: #48e;
+        }
+    footer {
+      background-color: #F0F3F4;
+      padding: 50px 0;
+      position: relative;
+      top: 1700px
+    }
+    
+    footer h4 {
+      color: #333;
+      font-size: 20px;
+      margin-bottom: 20px;
+    }
+    
+    footer p, footer ul {
+      color: #666;
+    }
+    
+    footer ul {
+      list-style: none;
+      padding: 0;
+    }
+    
+    footer ul li {
+      margin-bottom: 10px;
+    }
+    p,
+    .footer p {
+      color: #333333;
+    }
+    
+    /* Color de texto secundario */
+    .footer ul,
+    .footer ul li {
+      color: #666666;
+    }
+    
+    /* Color de fondo del footer */
+    footer {
+      background-color: #d8dce6;
+      text-align: center;
+    }
+    .social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li a {
+  color: #666;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+  color: #333;
+}
+</style>
+</body>
+</html>

@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+    <style>
+        body{
+            font-family: "Montserrat", sans-serif;
+            background-color: #F0F3F4;
+        }
+        .social-icons li {
+  display: inline-block;
+  margin-right: 10px;
+}
+
+.social-icons li a {
+  color: #666;
+  font-size: 18px;
+  transition: color 0.3s;
+}
+
+.social-icons li a:hover {
+  color: #333;
+}
+        h2{
+            text-align: center;
+        }
+        ul{
+            text-align: center;
+            list-style-type: none;
+        }
+        a{
+            text-decoration: none;
+            color: #48e
+        }
+    </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contacto</title>
+</head>
+<body>
+
+
+    <nav class="sidenav" id="mySidenav">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+        <a target="_blank" href="index.html">Inicio</a>
+        <a target="_blank" href="sobreNosotros.html">Sobre Nosotros</a>
+        <a target="_blank" href="masInformacion.html">Más información</a>
+        <a target="_blank" href="contacto.html">contacto</a>
+        <a target="_blank" href="https://GitHub.com">Repositorio de GitHub</a>
+      </nav>
+      
+      
+      
+      <div class="main" id="main">
+        <span style="font-size:30px;cursor:pointer"  onclick="openNav()">&#9776;</span>
+      </div>
+
+   <div><h2>Ubicación:</h2>
+    <div id="mapa" style="height: 400px;"></div>
+    <script>
+        function initMap() {
+            // Coordenadas aleatorias en medio del océano Atlántico
+            const myLatLng = { lat: 0, lng: -30 };
+            const map = new google.maps.Map(document.getElementById('mapa'), {
+                zoom: 2,
+                center: myLatLng
+            });
+            const marker = new google.maps.Marker({
+                position: myLatLng,
+                map: map,
+                title: 'Ubicación Aleatoria'
+            });
+        }
+    </script>
+    <script src="https://maps.googleapis.com/maps/api/js?callback=initMap" async defer></script></div>
+    
+
+    
+    <section id="contacto">
+        <div class="contacto-info">
+            <h2>Más info.</h2>
+            <ul>
+                <li><span class="icon">📍</span> Dirección: Avenida Principal 456, Ciudad del Sol, País de las Maravillas</li>
+                <li><span class="icon">📞</span> Teléfono:+1 (555) 123-4567</li>
+                <li><span class="icon">📧</span> Correo Electrónico: info@LosAngeles.com</li>
+                <li><span class="icon">🌐</span> Redes Sociales:Facebook: <a href="https://www.facebook.com/">Facebook.com</a>
+                    Instagram: <a href="https://www.instagram.com/">Instagram.com</a>
+                    Twitter: <a href="https://twitter.com/?lang=es">Twiter.com</a></li>
+                <li><span class="icon">⏰</span> Horario de Atención:  Lunes a Viernes de 9:00 AM a 6:00 PM</li>
+            </ul>
+        </div>
+
+        </div>
+    </section>
+<script>
+    
+function openNav() {
+  document.getElementById("mySidenav").style.width = "250px";
+  document.getElementById("main").style.marginLeft = "-250px";
+  document.getElementById("overlay").style.width = "100%";
+  document.getElementById("overlay").style.opacity = "0.8";
+}
+
+function closeNav() {
+  document.getElementById("mySidenav").style.width = "0";
+  document.getElementById("main").style.marginLeft = "0";
+  document.getElementById("overlay").style.width = "0";
+  document.getElementById("overlay").style.opacity = "0";
+}
+</script>
+<style>
+    .sidenav {
+  height: 100%;
+  width: 0;
+  position: fixed;
+  z-index: 1;
+  top: 0;
+  left: 0;
+  background-color: #2C3E50;
+  overflow-x: hidden;
+  transition: 0.5s;
+  padding-top: 60px;
+}
+.sidenav a {
+  padding: 8px 8px 8px 32px;
+  text-decoration: none;
+  font-size: 25px;
+  color: #f1f1f1;
+  display: block;
+  transition: 0.3s;
+}
+.sidenav a:hover {
+  color: grey;
+}
+.sidenav .closebtn {
+  position: absolute;
+  top: 0;
+  right: 25px;
+  font-size: 36px;
+  margin-left: 50px;
+}
+</style>
+<hr style="margin-top: 100px" class="separator">
+<footer style="margin-top: 20px">
+  <div class="container">
+      <div class="row">
+          <div class="col-md-4">
+              <h4>Contacto</h4>
+              <p>Dirección: Pepito123</p>
+              <p>Teléfono: +54-11-22334455</p>
+              <p>Correo electrónico: Sammauro@gmail.com</p>
+          </div>
+          <div class="col-md-4">
+              <h4>Enlaces rápidos</h4>
+              <ul>
+                  <li><a class="enlacesR" href="index.html">Inicio</a></li>
+                  <li><a class="enlacesR" href="sobreNosotros.html">sobre Nosotros</a></li>
+                  <li><a class="enlacesR" href="masInformacion.html">Mas información</a></li>
+                  <li><a class="enlacesR" href="contacto.html">Contacto</a></li>
+              </ul>
+          </div>
+          <div class="col-md-4">
+              <h4>Síguenos</h4>
+              <ul class="social-icons">
+                  <li><a href="https://www.facebook.com/"><i class="fab fa-facebook-f"></i></a></li>
+                  <li><a href="https://twitter.com/?lang=es"><i class="fab fa-twitter"></i></a></li>
+                  <li><a href="https://www.instagram.com/"><i class="fab fa-instagram"></i></a></li>
+              </ul>
+          </div>
+      </div>
+  </div>
+</footer>
+<style>
+    .enlacesR{
+      text-decoration: none;
+      color: #48e;
+    }
+    .separator {
+  width: 50%; 
+  margin: 0 auto;
+  border: none;
+  border-top: 1px solid #ccc;
+  margin-bottom: 30px;
+}
+footer {
+  background-color: #F0F3F4;
+  padding: 50px 0;
+  position: relative;
+  bottom: 0;
+}
+
+footer h4 {
+  color: #333;
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+footer p, footer ul {
+  color: #666;
+}
+
+footer ul {
+  list-style: none;
+  padding: 0;
+}
+
+footer ul li {
+  margin-bottom: 10px;
+}
+p,
+.footer p {
+  color: #333333;
+}
+
+/* Color de texto secundario */
+.footer ul,
+.footer ul li {
+  color: #666666;
+}
+
+/* Color de fondo del footer */
+footer {
+  background-color: #d8dce6;
+  text-align: center;
+}
+</style>
+</body>
+</html>
